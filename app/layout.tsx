@@ -1,6 +1,12 @@
+//this is the root level layout
+// it is used to define the globally shared UI
+
+//nextjs only renders the part that it has to render
+//this improves performance
+
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
+import "@/app/ui/globals.css"
 
 const inter = Inter({ subsets: ['latin'] })
 
