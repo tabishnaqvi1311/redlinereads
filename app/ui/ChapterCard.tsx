@@ -9,7 +9,7 @@ export default async function ChapterCard() {
     return (
         <>
             <div className="flex flex-col gap-5 items-center">
-                {chapters.map((chapter: Chapter) => (
+                {chapters && chapters.map((chapter: Chapter) => (
                     <Link
                         href={`/chapter/${chapter.chapterNumber}`}
                         className="flex flex-col items-center rounded lg:w-1/2 w-full shadow-sm cursor-pointer p-2 bg-gray-700 hover:bg-gray-800"

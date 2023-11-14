@@ -1,6 +1,6 @@
 export const getChapters = async () => {
     try {
-        const response = await fetch(`https://redlinereads-j9l9vcwwn-tabishnaqvi1311.vercel.app/api/chapter`, {
+        const response = await fetch(`${process.env.NEXT_API_PUBLIC_URL}/api/chapter`, {
             cache: "no-store"
         })
         if (!response.ok) {
@@ -14,7 +14,7 @@ export const getChapters = async () => {
 
 export const getChapter = async(id: number) => {
     try{
-        const response = await fetch(`https://redlinereads-j9l9vcwwn-tabishnaqvi1311.vercel.app/api/chapter/${id}`)
+        const response = await fetch(`${process.env.NEXT_API_PUBLIC_URL}/api/chapter/${id}`)
         if(!response.ok){
             throw new Error("Failed to fetch");
         }
