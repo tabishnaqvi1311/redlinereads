@@ -13,6 +13,7 @@ export default async function ChapterCard() {
                     <Link
                         href={`/chapter/${chapter.chapterNumber}`}
                         className="flex flex-col items-center rounded lg:w-1/2 w-full shadow-sm cursor-pointer p-2 bg-gray-700 hover:bg-gray-800"
+                        key={chapter.chapterNumber}
                     >
                         <h1 className="text-lg font-semibold">
                             One Piece Chapter {chapter.chapterNumber}
